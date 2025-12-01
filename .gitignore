@@ -1,15 +1,17 @@
 ### IntelliJ IDEA ###
+.idea/
+*.iml
+
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-.idea/
 
 ### Eclipse ###
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 bin/
@@ -28,3 +30,18 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Windows ###
+Thumbs.db
+
+### Arquivos gerados pelo simulador ###
+fs.img
+fs.journal
+
+### Logs ###
+*.log
+
+### Arquivos temporários gerais ###
+*.tmp
+*.swp
+*.swo
