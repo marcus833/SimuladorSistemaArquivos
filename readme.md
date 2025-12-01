@@ -1,10 +1,9 @@
 # Simulador de Sistema de Arquivos (com Journaling)
 
-**Disciplina:** [Nome da disciplina]  
-**Autores:** [Nome do Aluno A] e [Nome do Aluno B]  
-**Entrega:** Relatório em PDF (imprimir este README)  
-**Repositório GitHub:** [COLE AQUI O LINK DO SEU REPOSITÓRIO]
-
+**Disciplina:** Proj de sistema operacional  
+**Autores:** Marcus Vinicius e João Pedro  
+**Entrega:** Relatório em PDF  
+**Repositório GitHub:** https://github.com/marcus833/SimuladorSistemaArquivos
 ---
 
 ## Resumo
@@ -53,9 +52,9 @@ Neste simulador usamos um esquema simples do tipo WAL: gravamos Simulador.FsNode
 **Journaling**
 
 - Cada operação geradora de alteração grava uma entrada no journal:
-    - id, tipo (CREATE, DELETE, RENAME, COPY, MKDIR, RMDIR), parâmetros, status (PENDING/COMMIT).
+  - id, tipo (CREATE, DELETE, RENAME, COPY, MKDIR, RMDIR), parâmetros, status (PENDING/COMMIT).
 - Após aplicar com sucesso, marcada como COMMIT.
-- Na inicialização, o simulador lê `fs.journal` e reaplica entradas PENDING (recovery).
+- Na inicialização, o simulador lê `fs.journal` e reaplica entradas PENDING.
 
 ---
 
@@ -68,8 +67,6 @@ Neste simulador usamos um esquema simples do tipo WAL: gravamos Simulador.FsNode
 - `src/Simulador/Simulador.DirectoryNode.java` — representacao de diretório.
 - `src/Simulador/Simulador.Journal.java` — gerenciamento do journal (append/read/replay).
 - `src/Simulador/MainShell.java` — modo shell, lê comandos do usuário.
-
-> O código de exemplo completo segue abaixo (copie e cole nos arquivos indicados).
 
 ---
 
@@ -85,3 +82,4 @@ Neste simulador usamos um esquema simples do tipo WAL: gravamos Simulador.FsNode
 2. No diretório raiz:
 ```bash
 javac -d out src/Simulador/*.java
+java -cp out Simulador.MainShell
